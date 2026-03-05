@@ -16,6 +16,9 @@
     };
   };
 
+  xdg.configFile."nvim".source = minicfg;
+  xdg.configFile."awesome/rc.lua".source = ./rc.lua;
+
   home = {
     stateVersion = "25.11";
 
@@ -34,8 +37,11 @@
       minicfg.packages.${pkgs.system}.default
       opencode
       vim
+      brave
+      wget
+      acpi
     ];
   };
 }
 
-# vim: sw=2:ts=2
+# vim: sw=2:ts=2:et
