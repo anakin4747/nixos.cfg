@@ -28,6 +28,7 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    xclip
   ];
 
   services = {
