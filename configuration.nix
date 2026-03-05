@@ -57,7 +57,11 @@
       enable = true;
       pulse.enable = true;
     };
-    libinput.enable = true;
+    libinput = {
+      enable = true;
+      touchpad.naturalScrolling = true;
+      touchpad.tapping = false;
+    };
     openssh.enable = true;
   };
 
