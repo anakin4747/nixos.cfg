@@ -33,6 +33,7 @@
 
     packages = with pkgs; [
       git
+      gh
       gnumake
       minicfg.packages.${pkgs.system}.default
       opencode
