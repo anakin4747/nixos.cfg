@@ -29,6 +29,15 @@
     vim
     git
     xclip
+    st
+    # (st.overrideAttrs (oldAttrs: {
+    #   patches = [
+    #     (fetchpatch {
+    #       url = "https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff";
+    #       sha256 = "01/KBNbBKcFcfbcpMnev/LCzHpON3selAYNo8NUPbF4=";
+    #     })
+    #   ];
+    # }))
   ];
 
   services = {
