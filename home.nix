@@ -18,6 +18,7 @@
 
   xdg.configFile."nvim".source = minicfg;
   xdg.configFile."awesome/rc.lua".source = ./rc.lua;
+  home.file.".bg/frank.jpg".source = ./frank.jpg;
 
   home = {
     stateVersion = "25.11";
@@ -32,6 +33,7 @@
     };
 
     packages = with pkgs; [
+      feh
       git
       gh
       gnumake
