@@ -29,15 +29,21 @@
     vim
     git
     xclip
-    st
-    # (st.overrideAttrs (oldAttrs: {
-    #   patches = [
-    #     (fetchpatch {
-    #       url = "https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff";
-    #       sha256 = "01/KBNbBKcFcfbcpMnev/LCzHpON3selAYNo8NUPbF4=";
-    #     })
-    #   ];
-    # }))
+    picom
+    (pkgs.st.overrideAttrs (oldAttrs: {
+      version = "0.8.5";
+      src = pkgs.fetchurl {
+        url = "https://dl.suckless.org/st/st-0.8.5.tar.gz";
+        sha256 = "0dxb8ksy4rcnhp5k54p7i7wwhm64ksmavf5wh90zfbyh7qh34s7a";
+      };
+      patches = [
+        ./st-config-h.patch
+        (pkgs.fetchpatch {
+          url = "https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff";
+          sha256 = "10gvwnpbjw49212k25pddji08f4flal0g9rkwpvkay56w8y81r22";
+        })
+      ];
+    }))
   ];
 
   services = {
