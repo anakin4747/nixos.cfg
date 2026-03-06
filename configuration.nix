@@ -30,6 +30,7 @@
     git
     xclip
     picom
+    libnotify
     (pkgs.st.overrideAttrs (oldAttrs: {
       version = "0.8.5";
       src = pkgs.fetchurl {
