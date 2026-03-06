@@ -39,7 +39,7 @@ local function safe_restart ()
     end)
 end
 
-local terminal = "st -e nvim +term"
+local terminal = "st -e v"
 local modkey = "Mod1"
 local winkey = "Mod4"
 
@@ -275,4 +275,3 @@ end)
 
 awful.spawn.with_shell("picom --backend=glx --no-fading-openclose --fade-in-step=1 --fade-out-step=1")
 awful.spawn.with_shell("feh --bg-fill ~/.bg/frank.jpg") -- Hacky TODO Fix
--- awful.spawn.with_shell("st -e v")
