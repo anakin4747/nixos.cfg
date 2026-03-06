@@ -72,7 +72,6 @@
       touchpad.naturalScrolling = true;
       touchpad.tapping = false;
     };
-    openssh.enable = true;
   };
 
   system.stateVersion = "25.11";
