@@ -11,6 +11,7 @@
 
     zsh = {
       enable = true;
+      enableCompletion = true;
       initContent = builtins.readFile ./.zshrc;
       syntaxHighlighting.enable = true;
     };
@@ -33,16 +34,16 @@
     };
 
     packages = with pkgs; [
+      acpi
+      brave
       feh
-      git
       gh
+      git
       gnumake
       minicfg.packages.${pkgs.system}.default
       opencode
       vim
-      brave
       wget
-      acpi
     ];
   };
 }
