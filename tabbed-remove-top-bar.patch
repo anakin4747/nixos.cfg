@@ -1,0 +1,26 @@
+From 338f090466292990cf599ba2294316e7250a5039 Mon Sep 17 00:00:00 2001
+From: Anakin Childerhose <anakin@childerhose.ca>
+Date: Sat, 7 Mar 2026 14:01:34 -0500
+Subject: [PATCH] remove drawing of bar
+
+---
+ tabbed.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/tabbed.c b/tabbed.c
+index 2fb5aa7..2ec8da1 100644
+--- a/tabbed.c
++++ b/tabbed.c
+@@ -1003,7 +1003,8 @@ setup(void)
+ 	screen = DefaultScreen(dpy);
+ 	root = RootWindow(dpy, screen);
+ 	initfont(font);
+-	bh = dc.h = dc.font.height + 2;
++	bh = 0;
++	dc.h = dc.font.height + 2;
+ 
+ 	/* init atoms */
+ 	wmatom[WMDelete] = XInternAtom(dpy, "WM_DELETE_WINDOW", False);
+-- 
+2.53.0
+

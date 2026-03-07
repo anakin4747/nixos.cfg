@@ -33,6 +33,16 @@
       picom
       vim
       xclip
+      (pkgs.tabbed.overrideAttrs (oldAttrs: {
+        patches = [
+          ./tabbed-config-h.patch
+          ./tabbed-remove-top-bar.patch
+          (pkgs.fetchpatch {
+            url = "https://tools.suckless.org/tabbed/patches/alpha/tabbed-alpha-0.9.diff";
+            sha256 = "0xrgsz0az84nb6jbyxlp73668wpp4sc87raavalb69iwxzsi17fw";
+          })
+        ];
+      }))
       (pkgs.st.overrideAttrs (oldAttrs: {
         version = "0.8.5";
         src = pkgs.fetchurl {
