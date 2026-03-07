@@ -39,7 +39,7 @@ local function safe_restart ()
     end)
 end
 
-local terminal = "st -e v"
+local terminal = "tabbed -c -r 2 st -w ''"
 local modkey = "Mod1"
 local winkey = "Mod4"
 
