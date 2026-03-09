@@ -39,7 +39,7 @@ local function safe_restart ()
     end)
 end
 
-local terminal = "tabbed -c -r 2 st -w ''"
+local terminal = "tabbed -p -1 -c -r 2 st -w ''"
 local modkey = "Mod1"
 local winkey = "Mod4"
 
@@ -301,3 +301,4 @@ end)
 
 awful.spawn.with_shell("picom --backend=glx --no-fading-openclose --fade-in-step=1 --fade-out-step=1")
 awful.spawn.with_shell("feh --bg-fill ~/.bg/frank.jpg") -- Hacky TODO Fix
+awful.spawn.with_shell(terminal .. "-e v")
