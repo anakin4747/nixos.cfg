@@ -140,6 +140,32 @@ local globalkeys = gears.table.join(
         { modkey, "Shift" }, "l",
         function () awful.client.swap.global_bydirection("right") end,
         { description = "swap client with right", group = "client" }
+    ),
+
+    awful.key(
+        {}, "XF86AudioLowerVolume",
+        function () awful.spawn("amixer set Master 5%-") end,
+        { description = "lower volume", group = "media" }
+    ),
+    awful.key(
+        {}, "XF86AudioRaiseVolume",
+        function () awful.spawn("amixer set Master 5%+") end,
+        { description = "raise volume", group = "media" }
+    ),
+    awful.key(
+        {}, "XF86AudioMute",
+        function () awful.spawn("amixer set Master toggle") end,
+        { description = "toggle mute", group = "media" }
+    ),
+    awful.key(
+        {}, "XF86MonBrightnessDown",
+        function () awful.spawn("light -U 1") end,
+        { description = "brightness down", group = "media" }
+    ),
+    awful.key(
+        {}, "XF86MonBrightnessUp",
+        function () awful.spawn("light -A 1") end,
+        { description = "brightness up", group = "media" }
     )
 )
 

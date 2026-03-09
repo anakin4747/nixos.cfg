@@ -30,8 +30,10 @@
   environment = {
     pathsToLink = [ "/share/zsh" ];
     systemPackages = with pkgs; [
+      alsa-utils
       git
       libnotify
+      acpilight
       picom
       vim
       xclip
