@@ -25,7 +25,10 @@
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 
-  programs.nano.enable = false;
+  programs = {
+    nano.enable = false;
+    slock.enable = true;
+  };
 
   environment = {
     pathsToLink = [ "/share/zsh" ];
@@ -37,6 +40,7 @@
       picom
       vim
       xclip
+      (pkgs.slock.overrideAttrs (oldAttrs: { patches = [ ./slock-only-black.patch ]; }))
       (pkgs.tabbed.overrideAttrs (oldAttrs: {
         patches = [
           ./tabbed-config-h.patch

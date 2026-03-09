@@ -9,3 +9,4 @@
 - make a language server bats test harness for having deterministic tests for
   the LSP
 
+- fix slock patch not applying

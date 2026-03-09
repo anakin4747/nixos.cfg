@@ -73,6 +73,11 @@ local globalkeys = gears.table.join(
     ),
 
     awful.key(
+        { winkey }, "l", function () awful.spawn("slock") end,
+        { description = "open a terminal", group = "launcher" }
+    ),
+
+    awful.key(
         { modkey }, "r", safe_restart,
         { description = "reload awesome", group = "awesome" }
     ),

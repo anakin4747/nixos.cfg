@@ -1,0 +1,27 @@
+From a56a9663df4e1d2e871fbcc2a7ebb66a698e5e35 Mon Sep 17 00:00:00 2001
+From: Anakin Childerhose <anakin@childerhose.ca>
+Date: Mon, 9 Mar 2026 18:47:56 -0400
+Subject: [PATCH] set only black
+
+---
+ config.def.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 9855e21..89c35b6 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -4,8 +4,8 @@ static const char *group = "nogroup";
+ 
+ static const char *colorname[NUMCOLS] = {
+ 	[INIT] =   "black",     /* after initialization */
+-	[INPUT] =  "#005577",   /* during input */
+-	[FAILED] = "#CC3333",   /* wrong password */
++	[INPUT] =  "black",   /* during input */
++	[FAILED] = "black",   /* wrong password */
+ };
+ 
+ /* treat a cleared input like a wrong password (color) */
+-- 
+2.53.0
+
