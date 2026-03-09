@@ -25,6 +25,8 @@
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 
+  programs.nano.enable = false;
+
   environment = {
     pathsToLink = [ "/share/zsh" ];
     systemPackages = with pkgs; [
