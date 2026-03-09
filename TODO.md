@@ -10,3 +10,5 @@
   the LSP
 
 - fix slock patch not applying
+
+- possibly investigate using ghostty instead?
