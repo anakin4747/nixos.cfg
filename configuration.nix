@@ -90,6 +90,7 @@
       touchpad.naturalScrolling = true;
       touchpad.tapping = false;
     };
+    unclutter.enable = true;
   };
 
   system.stateVersion = "25.11";
