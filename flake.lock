@@ -72,11 +72,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773094248,
-        "narHash": "sha256-Bsyix2+fTM/aLMPTC+x0RdZ+bDWH2qN2782ltLzX5ws=",
+        "lastModified": 1773102699,
+        "narHash": "sha256-QZBLSGqfO0MizUM7ODl+PLjbGxQGPToVMyBZQ6oZFoo=",
         "owner": "anakin4747",
         "repo": "minicfg",
-        "rev": "ed0a9826462a81d6b1b390a2838eddff9cd2f1ea",
+        "rev": "6febb38d0ed6d4f234919aad926506556afa735d",
         "type": "github"
       },
       "original": {
