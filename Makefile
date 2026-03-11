@@ -8,4 +8,4 @@ nixos-rebuild:
 	sudo nixos-rebuild switch --flake $(FLAKE)
 
 home-manager-switch:
-	nix run home-manager/master -- switch --flake $(HOME_TARGET)
+	nix run --experimental-features 'nix-command flakes' home-manager/master -- switch --flake $(HOME_TARGET)
