@@ -36,6 +36,7 @@
     packages = with pkgs; [
       acpi
       brave
+      cloc
       feh
       gh
       git
