@@ -23,8 +23,6 @@ do -- Handle runtime errors after startup
     end)
 end
 
-
-
 local function safe_restart ()
     awful.spawn.easy_async("awesome -k", function (_, _, _, exit_code)
         if exit_code == 0 then
