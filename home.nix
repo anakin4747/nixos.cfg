@@ -40,6 +40,9 @@
       gh
       git
       gnumake
+      obs-studio
+      mpv
+      imv
       minicfg.packages.${pkgs.system}.default
       opencode
       vim
