@@ -17,7 +17,7 @@
 
   users.users.kin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
   };
 
   time.timeZone = "America/Toronto";
@@ -28,6 +28,10 @@
   programs = {
     nano.enable = false;
     slock.enable = true;
+  };
+
+  virtualisation.docker = {
+    enable = true;
   };
 
   environment = {
