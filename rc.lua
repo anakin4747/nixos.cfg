@@ -110,19 +110,19 @@ local globalkeys = gears.table.join(
     ),
 
     awful.key(
-        { modkey }, "h", function () move_direction("h") end,
+        { modkey }, "h", function () move_direction("left") end,
         { description = "move client focus left", group = "client" }
     ),
     awful.key(
-        { modkey }, "j", function () move_direction("j") end,
+        { modkey }, "j", function () move_direction("down") end,
         { description = "move client focus down", group = "client" }
     ),
     awful.key(
-        { modkey }, "k", function () move_direction("k") end,
+        { modkey }, "k", function () move_direction("up") end,
         { description = "move client focus up", group = "client" }
     ),
     awful.key(
-        { modkey }, "l", function () move_direction("l") end,
+        { modkey }, "l", function () move_direction("right") end,
         { description = "move client focus right", group = "client" }
     ),
 
