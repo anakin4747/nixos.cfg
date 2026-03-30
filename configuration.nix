@@ -95,6 +95,15 @@
       touchpad.tapping = false;
     };
     unclutter.enable = true;
+
+    picom = {
+      enable = true;
+      backend = "glx";
+      fade = true;
+      fadeSteps = [ 1.0 1.0 ];
+      fadeDelta = 1;
+      vSync = true;
+    };
   };
 
   system.stateVersion = "25.11";

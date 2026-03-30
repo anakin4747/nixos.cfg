@@ -302,6 +302,5 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", { raise = false })
 end)
 
-awful.spawn.with_shell("picom --backend=glx --no-fading-openclose --fade-in-step=1 --fade-out-step=1")
 awful.spawn.with_shell("feh --bg-fill ~/.bg/frank.jpg") -- Hacky TODO Fix
 awful.spawn.with_shell(terminal .. "-e v")
