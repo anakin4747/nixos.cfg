@@ -75,6 +75,7 @@
   services = {
     xserver = {
       enable = true;
+      enableTearFree = true;
       windowManager.awesome.enable = true;
       xkb = {
         layout = "us";
