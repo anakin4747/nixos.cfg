@@ -11,6 +11,7 @@
     kernelModules = [ ];
     extraModulePackages = [ ];
     initrd = {
+      verbose = false;
       kernelModules = [ "dm-snapshot" "cryptd" ];
       availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
       luks.devices."root".device =
