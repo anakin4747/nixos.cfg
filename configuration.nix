@@ -65,7 +65,7 @@
           ./st-config-h.patch
           (pkgs.fetchpatch {
             url = "https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff";
-            sha256 = "10gvwnpbjw49212k25pddji08f4flal0g9rkwpvkay56w8y81r22";
+            sha256 = "sha256-01/KBNbBKcFcfbcpMnev/LCzHpON3selAYNo8NUPbF4=";
           })
         ];
       }))
