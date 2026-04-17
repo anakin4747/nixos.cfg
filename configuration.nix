@@ -111,7 +111,11 @@
     libinput = {
       enable = true;
       touchpad.naturalScrolling = true;
-      touchpad.tapping = false;
+      touchpad.tapping = true;
+      touchpad.tappingDragLock = true;
+      touchpad.scrollMethod = "twofinger";
+      touchpad.disableWhileTyping = true;
+      touchpad.accelProfile = "adaptive";
     };
     unclutter.enable = true;
     usbmuxd.enable = true; # apple mobile device support
