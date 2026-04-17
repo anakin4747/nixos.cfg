@@ -15,6 +15,8 @@
       initContent = builtins.readFile ./.zshrc;
       syntaxHighlighting.enable = true;
     };
+
+    man.generateCaches = true;
   };
 
   xdg.configFile."nvim".source = minicfg;
@@ -44,8 +46,15 @@
       obs-studio
       mpv
       imv
+      kdePackages.kdenlive
+      ffmpeg
       minicfg.packages.${pkgs.system}.default
+      localsend
+      linux-manual
+      man-pages
+      man-pages-posix
       opencode
+      scrot
       vim
       wget
     ];
