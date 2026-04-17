@@ -22,6 +22,24 @@
         "type": "github"
       }
     },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -69,14 +87,15 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "wksls": "wksls"
       },
       "locked": {
-        "lastModified": 1773102699,
-        "narHash": "sha256-QZBLSGqfO0MizUM7ODl+PLjbGxQGPToVMyBZQ6oZFoo=",
+        "lastModified": 1774581175,
+        "narHash": "sha256-kLgkpze7sqlwdYax43ZWf6s0NtW5KW9eGqMcBwQjN34=",
         "owner": "anakin4747",
         "repo": "minicfg",
-        "rev": "6febb38d0ed6d4f234919aad926506556afa735d",
+        "rev": "c847ed88f09a0baf06e43fdd11280818e6176bd6",
         "type": "github"
       },
       "original": {
@@ -158,6 +177,43 @@
         "home-manager": "home-manager",
         "minicfg": "minicfg",
         "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "wksls": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "minicfg",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774579491,
+        "narHash": "sha256-9Lc/32oAYoL4i7TJR7TqyOXZsaoSlNYBHYTZLCASjGw=",
+        "owner": "anakin4747",
+        "repo": "wksls",
+        "rev": "d454458fbfec2745eb131db01be429355e1f2252",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anakin4747",
+        "repo": "wksls",
+        "type": "github"
       }
     }
   },
