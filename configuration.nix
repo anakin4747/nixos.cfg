@@ -85,7 +85,22 @@
       };
     };
     displayManager = {
-      ly.enable = true;
+      ly = {
+        enable = true;
+        settings = {
+          hide_borders = true;
+          hide_key_hints = true;
+          hide_keyboard_locks = true;
+          hide_version_string = true;
+          box_title = null;
+          show_tty = false;
+          clock = null;
+          battery_id = null;
+          animation = "none";
+          blank_box = true;
+          bg = 0;
+        };
+      };
       defaultSession = "none+awesome";
     };
     pipewire = {
