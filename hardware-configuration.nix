@@ -7,7 +7,7 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   boot = {
-    kernelParams = [ "quiet" ];
+    kernelParams = [ "quiet" "loglevel=0" ];
     kernelModules = [ ];
     extraModulePackages = [ ];
     initrd = {
