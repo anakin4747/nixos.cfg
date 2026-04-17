@@ -96,6 +96,7 @@
       touchpad.tapping = false;
     };
     unclutter.enable = true;
+    usbmuxd.enable = true; # apple mobile device support
 
     picom = {
       enable = true;
