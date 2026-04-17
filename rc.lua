@@ -303,4 +303,5 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 awful.spawn.with_shell("feh --bg-fill ~/.bg/frank.jpg") -- Hacky TODO Fix
+awful.spawn.with_shell("libinput-gestures")
 awful.spawn.with_shell(terminal .. "-e v")
