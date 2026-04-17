@@ -5,6 +5,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.stage2Greeting = "";
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
