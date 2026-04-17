@@ -98,7 +98,7 @@
           battery_id = null;
           animation = "none";
           blank_box = true;
-          bg = 2171169; # 0x212121 dark grey box; outer bg falls back to TTY default (black)
+          bg = 4473924; # 0x444444 dark grey box; outer bg falls back to TTY default (black)
         };
       };
       defaultSession = "none+awesome";
