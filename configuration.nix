@@ -16,6 +16,8 @@
   networking = {
     hostName = "lwa";
     networkmanager.enable = true;
+    firewall.allowedTCPPorts = [ 53317 ];
+    firewall.allowedUDPPorts = [ 53317 ];
   };
 
   users.users.kin = {
