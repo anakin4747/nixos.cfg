@@ -241,6 +241,15 @@ awful.rules.rules = {
         rule = { class = "Tor Browser" },
         properties = { floating = true }
     },
+    {
+        rule = { class = "Brave-browser" },
+        properties = {
+            fullscreen = false,
+            maximized = false,
+            maximized_horizontal = false,
+            maximized_vertical = false,
+        }
+    },
 }
 
 -- Init tags
