@@ -16,7 +16,7 @@
       syntaxHighlighting.enable = true;
     };
 
-    man.generateCaches = true;
+    # man.generateCaches = true;
   };
 
   xdg.configFile."nvim".source = minicfg;
