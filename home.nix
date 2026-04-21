@@ -22,8 +22,8 @@
   xdg.configFile."nvim".source = minicfg;
   xdg.configFile."awesome/rc.lua".source = ./rc.lua;
   xdg.configFile."libinput-gestures.conf".text = ''
-    gesture swipe right 3 awesome-client "awful.tag.viewprev()"
-    gesture swipe left  3 awesome-client "awful.tag.viewnext()"
+    gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
+    gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
   '';
   home.file.".bg/frank.jpg".source = ./frank.jpg;
 
