@@ -81,9 +81,29 @@
         "type": "github"
       }
     },
+    "language-server-bitbake": {
+      "inputs": {
+        "nixpkgs": [
+          "minicfg",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./language-server-bitbake",
+        "type": "path"
+      },
+      "original": {
+        "path": "./language-server-bitbake",
+        "type": "path"
+      },
+      "parent": [
+        "minicfg"
+      ]
+    },
     "minicfg": {
       "inputs": {
         "kconfig-language-server": "kconfig-language-server",
+        "language-server-bitbake": "language-server-bitbake",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": [
           "nixpkgs"
@@ -91,11 +111,11 @@
         "wksls": "wksls"
       },
       "locked": {
-        "lastModified": 1776810911,
-        "narHash": "sha256-9Wv8dOe3+Dvr/xj/Bt7ILo1xfcMpupBBciXrA8ToLEw=",
+        "lastModified": 1777505506,
+        "narHash": "sha256-P3aEhf1PqfnRqWcdokZdfE0rOG7BrTJaKV440bW5sng=",
         "owner": "anakin4747",
         "repo": "minicfg",
-        "rev": "ea95bdb5638f44935b86a43483c491a8a2c9932b",
+        "rev": "cb4e606eee92e3626d183e7a4cf9336f55a51b1a",
         "type": "github"
       },
       "original": {
