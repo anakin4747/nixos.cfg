@@ -32,7 +32,6 @@ local options = {
     splitbelow = true,
     splitright = true,
     swapfile = false,
-    tags = './tags;',
     tabstop = 4,
     termguicolors = true,
     textwidth = 79,
