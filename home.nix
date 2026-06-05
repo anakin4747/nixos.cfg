@@ -61,6 +61,7 @@
       gnumake
       obs-studio
       mpv
+      nmap
       imv
       kdePackages.kdenlive
       ffmpeg
