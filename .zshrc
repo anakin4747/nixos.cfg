@@ -80,7 +80,10 @@
 prompt off 2> /dev/null
 
 autoload -Uz vcs_info
-precmd() { vcs_info }
+precmd() {
+    printf "\033]133;A\007"
+    vcs_info
+}
 zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
@@ -133,3 +136,5 @@ PROMPT="$ERR_CODE$GIT_FMT%T $PROMPT_ICON_FMT"
 # #
 # # export PYENV_ROOT="$HOME/.pyenv"
 # # eval "$(pyenv init - zsh)"
+
+
