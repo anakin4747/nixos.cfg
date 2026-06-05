@@ -7,7 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     minicfg = {
-      url = "github:anakin4747/minicfg";
+      url = "path:./minicfg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
