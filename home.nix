@@ -16,6 +16,11 @@
       syntaxHighlighting.enable = true;
     };
 
+    zathura = {
+      enable = true;
+      extraConfig = builtins.readFile ./zathurarc;
+    };
+
     # man.generateCaches = true;
   };
 
@@ -26,6 +31,13 @@
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
   '';
   home.file.".bg/frank.jpg".source = ./frank.jpg;
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "org.pwmt.zathura.desktop";
+    };
+  };
 
   home = {
     stateVersion = "25.11";
