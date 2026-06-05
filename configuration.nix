@@ -4,13 +4,16 @@
   imports = [ ./hardware-configuration.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.extra-platforms = [ "aarch64-linux" ];  # usually set automatically
 
-  boot.stage2Greeting = "";
-
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    timeout = 0;
+  boot = {
+    binfmt.emulatedSystems = [ "aarch64-linux" ];
+    stage2Greeting = "";
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      timeout = 0;
+    };
   };
 
   networking = {
@@ -19,6 +22,8 @@
     firewall.allowedTCPPorts = [ 53317 ];
     firewall.allowedUDPPorts = [ 53317 ];
   };
+
+  hardware.bluetooth.enable = true;
 
   users.users.kin = {
     isNormalUser = true;
@@ -56,7 +61,7 @@
           ./tabbed-remove-top-bar.patch
           (pkgs.fetchpatch {
             url = "https://tools.suckless.org/tabbed/patches/alpha/tabbed-alpha-0.9.diff";
-            sha256 = "0xrgsz0az84nb6jbyxlp73668wpp4sc87raavalb69iwxzsi17fw";
+            sha256 = "1hmr1ikn1hjjs28mirqmb4b5y1pfd896vfmz42vjrpa8ingxj6q2";
           })
         ];
       }))
