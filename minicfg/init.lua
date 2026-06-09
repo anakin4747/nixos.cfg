@@ -116,6 +116,7 @@ local keymaps = {
     { 'n', '<leader>ct', ':Ctags<CR>',          'Generate ctags for project' },
 
     { 't', '<C-w>', '<C-\\><C-n><C-w>', 'Escape <C-w> in terminal mode' },
+    { 't', '<C-o>', '<C-\\><C-n><C-o>', 'Escape <C-o> in terminal mode' },
 
     { 'n', 'ZZ', vim.fn['ZZ#ZZ'], 'ZZ.term.vim ZZ function' },
 }
