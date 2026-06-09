@@ -35,7 +35,6 @@
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
   '';
-  home.file.".bg/frank.jpg".source = ./frank.jpg;
 
   xdg.mimeApps = {
     enable = true;
@@ -44,6 +43,7 @@
     };
   };
 
+  home.file.".bg/frank.jpg".source = ./frank.jpg;
   home = {
     stateVersion = "25.11";
 
