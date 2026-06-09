@@ -59,6 +59,10 @@
     "vim-fugitive": {
       "rev": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
       "src": "https://github.com/tpope/vim-fugitive.git"
+    },
+    "cscope_maps.nvim": {
+      "rev": "3ec60a35a805d07e5f4c673e7e0800a7ae5ab663",
+      "src": "https://github.com/dhananjaylatkar/cscope_maps.nvim.git"
     }
   }
 }

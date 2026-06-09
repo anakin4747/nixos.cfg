@@ -64,9 +64,13 @@ vim.pack.add({
     'https://github.com/ellisonleao/gruvbox.nvim.git',
     'https://github.com/nvim-treesitter/nvim-treesitter.git',
 
+    'https://github.com/dhananjaylatkar/cscope_maps.nvim.git',
+
     'https://github.com/github/copilot.vim.git',
     'https://github.com/anakin4747/ai.nvim.git',
 })
+
+require("cscope_maps").setup()
 -- }}}
 
 local function man()
