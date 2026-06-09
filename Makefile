@@ -2,10 +2,13 @@ HOSTNAME ?= $(shell hostname)
 FLAKE ?= .#$(HOSTNAME)
 HOME_TARGET ?= $(FLAKE)
 
-all: nixos-rebuild home-manager-switch
+.PHONY: all
+all: nixos home
 
-nixos-rebuild:
+.PHONY: nixos
+nixos:
 	sudo nixos-rebuild switch --flake $(FLAKE)
 
-home-manager-switch:
+.PHONY: home
+home:
 	nix run --experimental-features 'nix-command flakes' home-manager/master -- switch --flake $(HOME_TARGET)
