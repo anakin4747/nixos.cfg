@@ -66,10 +66,7 @@ vim.pack.add({
 
     'https://github.com/github/copilot.vim.git',
     'https://github.com/anakin4747/ai.nvim.git',
-    'https://github.com/olimorris/codecompanion.nvim.git',
 })
-
-require('codecompanion').setup()
 -- }}}
 
 local function man()
