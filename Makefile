@@ -12,3 +12,8 @@ nixos:
 .PHONY: home
 home:
 	nix run --experimental-features 'nix-command flakes' home-manager/master -- switch --flake $(HOME_TARGET)
+
+.PHONY: boot
+boot:
+	sudo nixos-rebuild boot --flake $(FLAKE)
+
