@@ -68,10 +68,6 @@ vim.pack.add({
 require("cscope_maps").setup()
 -- }}}
 
-local function man()
-    vim.cmd('vert Man ' .. vim.fn.expand('<cword>'))
-end
-
 -- diagnostics {{{
 local function next_diagnostic(backwards)
     local count = backwards and -1 or 1
@@ -92,7 +88,7 @@ local keymaps = {
     { 't', '<esc><esc>', '<C-\\><C-n>', 'double escape to escape terminal mode' },
     { 'n', '[d', function() next_diagnostic(true) end, 'Go to previous error' },
     { 'n', ']d', function() next_diagnostic(false) end, 'Go to next error' },
-    { 'n', '<leader>K', man, 'Open Man Page for word undercursor' },
+    { 'n', '<leader>K', ':vert Man<CR>', 'Open Man Page for word undercursor' },
 
     { { 'n', 'i', 'x', 'v', 't' }, '<C-h>', vim.fn['next_bufs#PrevTermBuf'],    'Previous terminal buffer' },
     { { 'n', 'i', 'x', 'v', 't' }, '<C-l>', vim.fn['next_bufs#NextTermBuf'],    'Next terminal buffer' },
