@@ -53,6 +53,7 @@
           bash-language-server
           clang-tools
           cmake-language-server
+          cscope
           docker-language-server
           dot-language-server
           fzf
