@@ -54,11 +54,11 @@
       picom
       vim
       xclip
-      (pkgs.slock.overrideAttrs (oldAttrs: { patches = [ ./slock-only-black.patch ]; }))
+      (pkgs.slock.overrideAttrs (oldAttrs: { patches = [ ./patches/slock-only-black.patch ]; }))
       (pkgs.tabbed.overrideAttrs (oldAttrs: {
         patches = [
-          ./tabbed-config-h.patch
-          ./tabbed-remove-top-bar.patch
+          ./patches/tabbed-config-h.patch
+          ./patches/tabbed-remove-top-bar.patch
           (pkgs.fetchpatch {
             url = "https://tools.suckless.org/tabbed/patches/alpha/tabbed-alpha-0.9.diff";
             sha256 = "1hmr1ikn1hjjs28mirqmb4b5y1pfd896vfmz42vjrpa8ingxj6q2";
@@ -72,7 +72,7 @@
           sha256 = "0dxb8ksy4rcnhp5k54p7i7wwhm64ksmavf5wh90zfbyh7qh34s7a";
         };
         patches = [
-          ./st-config-h.patch
+          ./patches/st-config-h.patch
           (pkgs.fetchpatch {
             url = "https://st.suckless.org/patches/alpha/st-alpha-20220206-0.8.5.diff";
             sha256 = "sha256-01/KBNbBKcFcfbcpMnev/LCzHpON3selAYNo8NUPbF4=";
