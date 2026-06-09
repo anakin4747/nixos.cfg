@@ -6,19 +6,19 @@
     home-manager.enable = true;
     bash = {
       enable = true;
-      bashrcExtra = builtins.readFile ./.bashrc;
+      bashrcExtra = builtins.readFile ./rc/bashrc;
     };
 
     zsh = {
       enable = true;
       enableCompletion = true;
-      initContent = builtins.readFile ./.zshrc;
+      initContent = builtins.readFile ./rc/zshrc;
       syntaxHighlighting.enable = true;
     };
 
     zathura = {
       enable = true;
-      extraConfig = builtins.readFile ./.zathurarc;
+      extraConfig = builtins.readFile ./rc/zathurarc;
     };
 
     lazygit = {
@@ -30,7 +30,7 @@
   };
 
   xdg.configFile."nvim".source = minicfg;
-  xdg.configFile."awesome/rc.lua".source = ./rc.lua;
+  xdg.configFile."awesome/rc.lua".source = ./rc/rc.lua;
   xdg.configFile."libinput-gestures.conf".text = ''
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
