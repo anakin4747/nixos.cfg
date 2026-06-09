@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./boards/x1-carbon-thinkpad-configuration.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.extra-platforms = [ "aarch64-linux" ];  # usually set automatically
