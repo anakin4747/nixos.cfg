@@ -18,7 +18,7 @@
 
     zathura = {
       enable = true;
-      extraConfig = builtins.readFile ./zathurarc;
+      extraConfig = builtins.readFile ./.zathurarc;
     };
 
     # man.generateCaches = true;
