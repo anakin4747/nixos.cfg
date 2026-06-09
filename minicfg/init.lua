@@ -48,26 +48,21 @@ end
 
 -- plugins {{{
 vim.pack.add({
+    'https://github.com/dhananjaylatkar/cscope_maps.nvim.git',
+    'https://github.com/ellisonleao/gruvbox.nvim.git',
+    'https://github.com/github/copilot.vim.git',
+    'https://github.com/mbbill/undotree.git',
     'https://github.com/nvim-lua/plenary.nvim.git',
     'https://github.com/nvim-telescope/telescope.nvim',
-    'https://github.com/mbbill/undotree.git',
-
-    'https://github.com/anakin4747/frenchcards.nvim.git',
-
+    'https://github.com/nvim-treesitter/nvim-treesitter.git',
     'https://github.com/tpope/vim-fugitive.git',
 
-    'https://github.com/anakin4747/resize.vim.git',
+    'https://github.com/anakin4747/ai.nvim.git',
+    'https://github.com/anakin4747/frenchcards.nvim.git',
     'https://github.com/anakin4747/next_bufs.vim.git',
     'https://github.com/anakin4747/oelint-adv.nvim.git',
+    'https://github.com/anakin4747/resize.vim.git',
     'https://github.com/anakin4747/ZZ.term.vim.git',
-
-    'https://github.com/ellisonleao/gruvbox.nvim.git',
-    'https://github.com/nvim-treesitter/nvim-treesitter.git',
-
-    'https://github.com/dhananjaylatkar/cscope_maps.nvim.git',
-
-    'https://github.com/github/copilot.vim.git',
-    'https://github.com/anakin4747/ai.nvim.git',
 })
 
 require("cscope_maps").setup()
