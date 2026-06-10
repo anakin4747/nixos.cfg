@@ -111,10 +111,6 @@ local keymaps = {
     { 'n', 'grr', ts.lsp_references, 'Telescope LSP symbol references' },
     { 'n', 'gO', ts.lsp_document_symbols, 'Telescope LSP document symbols' },
 
-    { 'n', '<leader>ft', ts.tags,               'Telescope: all tags' },
-    { 'n', '<leader>fT', ts.current_buffer_tags, 'Telescope: buffer tags' },
-    { 'n', '<leader>ct', ':Ctags<CR>',          'Generate ctags for project' },
-
     { 't', '<C-w>', '<C-\\><C-n><C-w>', 'Escape <C-w> in terminal mode' },
     { 't', '<C-o>', '<C-\\><C-n><C-o>', 'Escape <C-o> in terminal mode' },
 
