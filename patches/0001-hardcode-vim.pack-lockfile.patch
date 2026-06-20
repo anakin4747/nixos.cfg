@@ -1,0 +1,25 @@
+From 756bbf5d28c3f17107cb5eacaf118ca6a80483ac Mon Sep 17 00:00:00 2001
+From: Anakin Childerhose <anakin@childerhose.ca>
+Date: Sat, 20 Jun 2026 13:26:29 -0400
+Subject: [PATCH] hardcode vim.pack lockfile
+
+---
+ runtime/lua/vim/pack.lua | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/runtime/lua/vim/pack.lua b/runtime/lua/vim/pack.lua
+index aad11e0915..03212d313a 100644
+--- a/runtime/lua/vim/pack.lua
++++ b/runtime/lua/vim/pack.lua
+@@ -254,7 +254,7 @@ local function get_plug_dir()
+ end
+ 
+ local function lock_get_path()
+-  return vim.fs.joinpath(vim.fn.stdpath('config'), 'nvim-pack-lock.json')
++  return vim.fs.joinpath(vim.env.HOME, 'src/nixos.cfg/minicfg/nvim-pack-lock.json')
+ end
+ 
+ -- Git ------------------------------------------------------------------------
+-- 
+2.54.0
+
