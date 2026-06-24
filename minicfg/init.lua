@@ -2,8 +2,6 @@
 vim.g.mapleader = ' '
 vim.g.loaded_netrwPlugin = 1
 
-require('vim._core.ui2').enable({ msg = { targets = 'msg' } })
-
 -- options {{{
 local options = {
     backup = false,
