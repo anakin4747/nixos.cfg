@@ -25,8 +25,6 @@
       enable = true;
       settings = { gui = { showCommandLog = false; }; };
     };
-
-    # man.generateCaches = true;
   };
 
   xdg.configFile."nvim".source = minicfg;
