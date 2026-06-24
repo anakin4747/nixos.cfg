@@ -48,7 +48,6 @@ end
 
 -- plugins {{{
 vim.pack.add({
-    'https://github.com/dhananjaylatkar/cscope_maps.nvim.git',
     'https://github.com/ellisonleao/gruvbox.nvim.git',
     'https://github.com/github/copilot.vim.git',
     'https://github.com/mbbill/undotree.git',
@@ -64,8 +63,6 @@ vim.pack.add({
     'https://github.com/anakin4747/resize.vim.git',
     'https://github.com/anakin4747/ZZ.term.vim.git',
 })
-
-require("cscope_maps").setup()
 -- }}}
 
 -- diagnostics {{{
