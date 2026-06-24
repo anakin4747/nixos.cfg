@@ -57,6 +57,7 @@ vim.pack.add({
     'https://github.com/tpope/vim-fugitive.git',
 
     'https://github.com/anakin4747/ai.nvim.git',
+    'https://github.com/anakin4747/anakins-cscope.nvim.git',
     'https://github.com/anakin4747/frenchcards.nvim.git',
     'https://github.com/anakin4747/next_bufs.vim.git',
     'https://github.com/anakin4747/oelint-adv.nvim.git',
@@ -74,6 +75,7 @@ end
 
 -- keymaps {{{
 local ts = require('telescope.builtin')
+local ac = require('anakins-cscope')
 
 local keymaps = {
     { 'n', 'gd', '<C-]>', 'goto definition' },
@@ -112,6 +114,11 @@ local keymaps = {
     { 't', '<C-o>', '<C-\\><C-n><C-o>', 'Escape <C-o> in terminal mode' },
 
     { 'n', 'ZZ', vim.fn['ZZ#ZZ'], 'ZZ.term.vim ZZ function' },
+
+    { { 'n', 'v' }, '<leader>ic',  ac.goto_incoming_calls, 'cscope goto incoming calls' },
+    { { 'n', 'v' }, '<leader>oc',  ac.goto_outgoing_calls, 'cscope goto outgoing calls' },
+    { { 'n', 'v' }, '<leader>gd',  ac.goto_definition, 'cscope goto definition' },
+    { { 'n', 'v' }, '<leader>grr', ac.references, 'cscope references' },
 }
 
 for _, keymap in pairs(keymaps) do

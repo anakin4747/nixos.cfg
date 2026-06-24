@@ -8,6 +8,10 @@
       "rev": "94de8e6e2966b13fe0ec69aa4f75218f4fd4734a",
       "src": "https://github.com/anakin4747/ai.nvim.git"
     },
+    "anakins-cscope.nvim": {
+      "rev": "b4542f32f96f897e5ed142482bf8be1b53b7e8d8",
+      "src": "https://github.com/anakin4747/anakins-cscope.nvim.git"
+    },
     "codecompanion.nvim": {
       "rev": "de6039c78cf1881293e709270e84ea41ab1aa666",
       "src": "https://github.com/olimorris/codecompanion.nvim.git"
