@@ -54,6 +54,7 @@
       git = "git --no-pager";
       grep = "grep --color=always";
       ls = "ls -r1Ft --color=always";
+      up = "cd \"$(git rev-parse --show-toplevel 2>/dev/null)\"";
     };
 
     packages = with pkgs; [
