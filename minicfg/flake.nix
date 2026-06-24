@@ -71,6 +71,7 @@
           nodejs_24
           oelint-adv
           psmisc
+          python3
           pyright
           rust-analyzer
           shellcheck
