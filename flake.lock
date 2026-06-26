@@ -185,31 +185,11 @@
         "type": "github"
       }
     },
-    "language-server-bitbake": {
-      "inputs": {
-        "nixpkgs": [
-          "minicfg",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./language-server-bitbake",
-        "type": "path"
-      },
-      "original": {
-        "path": "./language-server-bitbake",
-        "type": "path"
-      },
-      "parent": [
-        "minicfg"
-      ]
-    },
     "minicfg": {
       "inputs": {
         "c-ls": "c-ls",
         "dtls": "dtls",
         "kconfig-language-server": "kconfig-language-server",
-        "language-server-bitbake": "language-server-bitbake",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": [
           "nixpkgs"

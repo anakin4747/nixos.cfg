@@ -12,10 +12,6 @@
         url = "github:anakin4747/wksls";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-    language-server-bitbake = {
-        url = "path:./language-server-bitbake";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
     dtls = {
         url = "github:anakin4747r2d2/anakins-dtls";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -26,13 +22,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, neovim-nightly-overlay, kconfig-language-server, wksls, language-server-bitbake, dtls, c-ls }:
+  outputs = { self, nixpkgs, neovim-nightly-overlay, kconfig-language-server, wksls, dtls, c-ls }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ neovim-nightly-overlay.overlays.default ];
       };
+
+      language-server-bitbake = pkgs.callPackage ./language-server-bitbake/package.nix {};
+
       scripts = pkgs.stdenv.mkDerivation {
         name = "scripts";
         src = ./scripts;
@@ -65,7 +64,7 @@
           gopls
           kconfig-language-server.packages.${system}.default
           wksls.packages.${system}.default
-          language-server-bitbake.packages.${system}.default
+          language-server-bitbake
           dtls.packages.${system}.default
           c-ls.packages.${system}.default
           lazygit
