@@ -223,8 +223,14 @@ vim.cmd([[
     colorscheme gruvbox
     highlight! link Folded LineNr
     highlight markdownError NONE
+    highlight! link DiagnosticSignError DiagnosticFloatingError
+    highlight! link DiagnosticSignWarn  DiagnosticFloatingWarn
+    highlight! link DiagnosticSignInfo  DiagnosticFloatingInfo
+    highlight! link DiagnosticSignHint  DiagnosticFloatingHint
+    highlight! link DiagnosticSignOk    DiagnosticFloatingOk
 ]])
 
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 
