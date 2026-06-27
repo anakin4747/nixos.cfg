@@ -113,8 +113,8 @@ local keymaps = {
 
     { 'n', 'ZZ', vim.fn['ZZ#ZZ'], 'ZZ.term.vim ZZ function' },
 
-    { { 'n', 'v' }, '<leader>ic',  ac.goto_incoming_calls, 'cscope goto incoming calls' },
-    { { 'n', 'v' }, '<leader>oc',  ac.goto_outgoing_calls, 'cscope goto outgoing calls' },
+    { { 'n', 'v' }, '<leader>cic', ac.goto_incoming_calls, 'cscope goto incoming calls' },
+    { { 'n', 'v' }, '<leader>coc', ac.goto_outgoing_calls, 'cscope goto outgoing calls' },
     { { 'n', 'v' }, '<leader>gd',  ac.goto_definition, 'cscope goto definition' },
     { { 'n', 'v' }, '<leader>grr', ac.references, 'cscope references' },
 }
