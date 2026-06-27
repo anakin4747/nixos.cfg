@@ -14,3 +14,5 @@ ERR_CODE='%B%F{red}%(?..%? )%f%b'
 GIT_FMT='%F{green}${vcs_info_msg_0_}%f'
 PROMPT_ICON_FMT='%B%F{blue}$ %f%b'
 PROMPT="$ERR_CODE$GIT_FMT%T $PROMPT_ICON_FMT"
+
+bindkey "^R" history-incremental-search-backward
