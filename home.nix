@@ -58,6 +58,7 @@
     packages = with pkgs; [
       acpi
       brave
+      b4
       cloc
       feh
       gh
