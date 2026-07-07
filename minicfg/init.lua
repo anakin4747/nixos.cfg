@@ -173,11 +173,6 @@ vim.api.nvim_create_autocmd('FileType', {
     pattern = 'man',
     command = [[ setlocal sw=1 ts=1 ]],
 })
-
-vim.api.nvim_create_autocmd('BufEnter', {
-    desc = 'unfold folds on buffer enter',
-    command = [[ silent! normal zR ]],
-})
 -- }}}
 
 -- lsps {{{
