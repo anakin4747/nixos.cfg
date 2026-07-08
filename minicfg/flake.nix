@@ -5,16 +5,16 @@
     nixpkgs.url = "github:nixos/nixpkgs";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     kconfig-language-server = {
-        url = "github:anakin4747/kconfig-language-server";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:anakin4747/kconfig-language-server";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     wksls = {
-        url = "github:anakin4747/wksls";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:anakin4747/wksls";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     dtls = {
-        url = "github:anakin4747r2d2/anakins-dtls";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:anakin4747r2d2/anakins-dtls";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
