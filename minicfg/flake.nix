@@ -18,8 +18,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, neovim-nightly-overlay, kconfig-language-server, wksls, dtls, c-ls }:
+  outputs = inputs@{ self, nixpkgs, neovim-nightly-overlay, ... }:
     let
+      inherit (inputs) kconfig-language-server wksls dtls;
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
