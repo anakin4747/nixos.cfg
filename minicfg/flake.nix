@@ -16,10 +16,6 @@
         url = "github:anakin4747r2d2/anakins-dtls";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-    c-ls = {
-        url = "github:anakin4747r2d2/anakins-c-ls";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, neovim-nightly-overlay, kconfig-language-server, wksls, dtls, c-ls }:
@@ -66,7 +62,6 @@
           wksls.packages.${system}.default
           language-server-bitbake
           dtls.packages.${system}.default
-          c-ls.packages.${system}.default
           lazygit
           lsof
           lua-language-server
