@@ -23,11 +23,14 @@
     firewall.allowedUDPPorts = [ 53317 ];
   };
 
-  hardware.bluetooth.enable = true;
+  hardware = {
+    acpilight.enable = true;
+    bluetooth.enable = true;
+  };
 
   users.users.kin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "input" ];
+    extraGroups = [ "wheel" "docker" "input" "video" ];
   };
 
   time.timeZone = "America/Toronto";
@@ -50,7 +53,6 @@
       alsa-utils
       git
       libnotify
-      acpilight
       picom
       vim
       xclip

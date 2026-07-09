@@ -162,12 +162,12 @@ local globalkeys = gears.table.join(
     ),
     awful.key(
         {}, "XF86MonBrightnessDown",
-        function () awful.spawn("light -U 1") end,
+        function () awful.spawn("xbacklight -dec 5") end,
         { description = "brightness down", group = "media" }
     ),
     awful.key(
         {}, "XF86MonBrightnessUp",
-        function () awful.spawn("light -A 1") end,
+        function () awful.spawn("xbacklight -inc 5") end,
         { description = "brightness up", group = "media" }
     )
 )
