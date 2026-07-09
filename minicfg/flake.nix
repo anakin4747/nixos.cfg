@@ -66,6 +66,7 @@
           lazygit
           lsof
           lua-language-server
+          jq
           nil
           nodejs_24
           oelint-adv
@@ -80,6 +81,7 @@
           tinymist
           tree-sitter
           typescript-language-server
+          ripgrep
           universal-ctags
           wl-clipboard
           xdg-utils
