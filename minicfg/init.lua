@@ -157,9 +157,25 @@ vim.api.nvim_create_autocmd('BufLeave', {
     callback = function() vim.o.scrolloff = options.scrolloff end,
 })
 
+
 vim.api.nvim_create_autocmd('FileType', {
-    desc = 'try to start treesitter for supported filetypes',
-    callback = function() pcall(vim.treesitter.start) end,
+    desc = 'auto-install treesitter parser and start treesitter',
+    callback = function(args)
+        vim.schedule(function()
+            local ts = require('nvim-treesitter')
+            local lang = vim.treesitter.language.get_lang(args.match)
+            if not lang then return end
+
+            local blocklist = { 'make' }
+            if vim.tbl_contains(blocklist, lang) then return end
+
+            if not vim.treesitter.language.add(lang) then
+                ts.install(lang):wait(30000)
+            end
+
+            pcall(vim.treesitter.start)
+        end)
+    end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -229,5 +245,4 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 
-require('nvim-treesitter').install('unstable')
 -- }}}
