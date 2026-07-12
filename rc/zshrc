@@ -8,6 +8,8 @@ precmd() {
 }
 zstyle ':vcs_info:git:*' formats '%b '
 
+zstyle ':completion:*' file-sort modification
+
 setopt PROMPT_SUBST
 
 ERR_CODE='%B%F{red}%(?..%? )%f%b'
