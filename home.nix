@@ -2,8 +2,8 @@
 
 {
   programs = {
-    # Let Home Manager install and manage itself.
     home-manager.enable = true;
+
     bash = {
       enable = true;
       bashrcExtra = builtins.readFile ./rc/bashrc;
@@ -36,9 +36,7 @@
 
   xdg.mimeApps = {
     enable = true;
-    defaultApplications = {
-      "application/pdf" = "org.pwmt.zathura.desktop";
-    };
+    defaultApplications = { "application/pdf" = "org.pwmt.zathura.desktop"; };
   };
 
   home.file.".bg/frank.jpg".source = ./frank.jpg;
