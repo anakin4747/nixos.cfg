@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dtls = {
-      url = "github:anakin4747r2d2/anakins-dtls";
+      url = "github:anakin4747/anakins-dtls";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
