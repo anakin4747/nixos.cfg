@@ -47,7 +47,6 @@
               ../patches/0001-hardcode-vim.pack-lockfile.patch
             ];
           }))
-          vimPlugins.nvim-treesitter.withAllGrammars
           autotools-language-server
           awk-language-server
           bash-language-server
