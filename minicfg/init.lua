@@ -71,6 +71,35 @@ local function next_diagnostic(backwards)
 end
 -- }}}
 
+local function goto_file()
+    local cfile = vim.fn.expand('<cfile>')
+    local filepath = vim.fn.findfile(cfile)
+
+    if not vim.uv.fs_stat(filepath) then
+        vim.notify(
+            "uv.fs_stat failed for '" .. filepath .. "'",
+            vim.log.levels.WARN
+        )
+        return
+    end
+
+    local line = vim.api.nvim_get_current_line()
+
+    vim.cmd('edit ' .. filepath)
+
+    local row, col = line:match(vim.pesc(cfile) .. ":(%d+):(%d+).*")
+
+    if row and col then
+        vim.api.nvim_win_set_cursor(0, { tonumber(row), tonumber(col) - 1 })
+        return
+    end
+
+    row = line:match(vim.pesc(cfile) .. ":(%d+).*")
+    if not row then return end
+
+    vim.api.nvim_win_set_cursor(0, { tonumber(row), 1 })
+end
+
 -- keymaps {{{
 local ts = require('telescope.builtin')
 local ac = require('anakins-cscope')
@@ -117,6 +146,8 @@ local keymaps = {
     { { 'n', 'v' }, '<leader>coc', ac.goto_outgoing_calls, 'cscope goto outgoing calls' },
     { { 'n', 'v' }, '<leader>gd',  ac.goto_definition, 'cscope goto definition' },
     { { 'n', 'v' }, '<leader>grr', ac.references, 'cscope references' },
+
+    { 'n', 'gf', goto_file, 'goto file that respects filename:row:column' },
 }
 
 for _, keymap in pairs(keymaps) do
