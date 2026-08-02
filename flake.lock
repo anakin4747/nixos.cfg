@@ -1,24 +1,7 @@
 {
   "nodes": {
-    "devicetree-specification": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1773157703,
-        "narHash": "sha256-sCidIES3iHedNOni2ui4NIa2EpPB9nVgmHb6P4GCPcw=",
-        "owner": "devicetree-org",
-        "repo": "devicetree-specification",
-        "rev": "9e02fb809737ff25e7d04ab2932822f6a6ef0166",
-        "type": "github"
-      },
-      "original": {
-        "owner": "devicetree-org",
-        "repo": "devicetree-specification",
-        "type": "github"
-      }
-    },
     "dtls": {
       "inputs": {
-        "devicetree-specification": "devicetree-specification",
         "flake-utils": "flake-utils",
         "nixpkgs": [
           "minicfg",
@@ -26,11 +9,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783999933,
-        "narHash": "sha256-dShZPpmA57/PUphh+EB0rC0TKNQVxiIKJnSMFqQuFoE=",
+        "lastModified": 1785686222,
+        "narHash": "sha256-LQlPzRxy3qkhzEu1AjVysz/0ZoeL3LRh95sdUi87INU=",
         "owner": "anakin4747",
         "repo": "anakins-dtls",
-        "rev": "3b3f52de6d80d4629e84f7c3f135d17ff7bfa815",
+        "rev": "7bdcc0b9963f9ae1ad4be7d7953187ee7f9fb635",
         "type": "github"
       },
       "original": {
