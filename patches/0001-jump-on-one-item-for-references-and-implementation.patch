@@ -1,0 +1,29 @@
+From 16d0470e92e29c0692e696f05427a375d30844a8 Mon Sep 17 00:00:00 2001
+From: Anakin Childerhose <anakin@childerhose.ca>
+Date: Sun, 2 Aug 2026 14:46:38 -0400
+Subject: [PATCH] jump on one item for references and implementation
+
+---
+ runtime/lua/vim/lsp/buf.lua | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/runtime/lua/vim/lsp/buf.lua b/runtime/lua/vim/lsp/buf.lua
+index 4364f098f1..a7ba6991bd 100644
+--- a/runtime/lua/vim/lsp/buf.lua
++++ b/runtime/lua/vim/lsp/buf.lua
+@@ -283,11 +283,7 @@ local function get_locations(method, context, opts)
+         vim.fn.setqflist({}, ' ', what)
+       end
+ 
+-      if
+-        #all_items == 1
+-        and method ~= 'textDocument/implementation'
+-        and method ~= 'textDocument/references'
+-      then
++      if #all_items == 1 then
+         local tagstack = { { tagname = tagname, from = from } }
+         vim.fn.settagstack(vim.fn.bufwinid(buf), { items = tagstack }, 't')
+         if opts.loclist then
+-- 
+2.54.0
+
