@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785686222,
-        "narHash": "sha256-LQlPzRxy3qkhzEu1AjVysz/0ZoeL3LRh95sdUi87INU=",
+        "lastModified": 1785882020,
+        "narHash": "sha256-NZBoakpPbaOrBeBujc0G4FpXLXBMmN7bUmdeJs4JSqg=",
         "owner": "anakin4747",
         "repo": "anakins-dtls",
-        "rev": "7bdcc0b9963f9ae1ad4be7d7953187ee7f9fb635",
+        "rev": "926b800ac789191d66619585b53af8419d4c695e",
         "type": "github"
       },
       "original": {
