@@ -36,3 +36,5 @@ __prompt_command() {
 
     PS1+="\A ${green}\W ${blue}\$${rst} "
 }
+
+export GPG_TTY=$(tty)

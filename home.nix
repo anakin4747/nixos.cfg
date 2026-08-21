@@ -29,6 +29,7 @@
 
   xdg.configFile."nvim".source = minicfg;
   xdg.configFile."awesome/rc.lua".source = ./rc/rc.lua;
+  xdg.configFile."himalaya/config.toml".source = ./rc/himalaya.toml;
   xdg.configFile."libinput-gestures.conf".text = ''
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
@@ -37,6 +38,14 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = { "application/pdf" = "org.pwmt.zathura.desktop"; };
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    pinentry.package = pkgs.pinentry-tty;
+    extraConfig = ''
+      allow-loopback-pinentry
+    '';
   };
 
   home.file.".bg/frank.jpg".source = ./frank.jpg;
@@ -62,6 +71,8 @@
       gh
       git
       gnumake
+      gnupg
+      himalaya
       obs-studio
       mpv
       nmap
@@ -75,6 +86,7 @@
       man-pages
       man-pages-posix
       opencode
+      pass
       scrot
       vim
       wget

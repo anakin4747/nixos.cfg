@@ -18,3 +18,5 @@ PROMPT_ICON_FMT='%B%F{blue}$ %f%b'
 PROMPT="$ERR_CODE$GIT_FMT%T $PROMPT_ICON_FMT"
 
 bindkey "^R" history-incremental-search-backward
+
+export GPG_TTY=$(tty)
