@@ -8,16 +8,16 @@
 }:
 
 let
-  version = "2.9.0";
+  version = "2.10.0";
 
   vsixSrc = fetchurl {
     url = "https://github.com/yoctoproject/vscode-bitbake/releases/download/v${version}/yocto-bitbake-${version}.vsix";
-    hash = "sha256-7Mawp+mEkjniQmKe1fZPcLibcZ6d9xIHJh243LIzU1w=";
+    hash = "sha256-CTmc/RQW46B83V86S3Z/6jZw4SjnMmFSFvV22toMLY4=";
   };
 
   serverTgz = fetchurl {
     url = "https://github.com/yoctoproject/vscode-bitbake/releases/download/v${version}/language-server-bitbake-${version}.tgz";
-    hash = "sha256-pRPP3rDrEo5sh0tGmTh9BDcTK6QZTWK4en60Zb55+jU=";
+    hash = "sha256-Qg3WzG/6OoH7ayIdLQ5/DnB92rKPKfsHJhqH7XL2rwo=";
   };
 in
 
