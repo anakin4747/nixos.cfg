@@ -137,6 +137,15 @@
       fadeDelta = 1;
       vSync = true;
     };
+
+    clamav = {
+      daemon.enable = true;
+      updater = {
+        enable = true;
+        interval = "hourly";
+        frequency = 12;
+      };
+    };
   };
 
   system.stateVersion = "25.11";
