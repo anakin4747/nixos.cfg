@@ -1,0 +1,12 @@
+[accounts.apple]
+default = true
+
+caldav.discover = "icloud.com"
+caldav.server = "https://caldav.icloud.com/"
+# The home URL is usually of this shape:
+#caldav.home = "https://caldav.icloud.com/<id>/calendars/"
+
+caldav.auth.basic.username = "anakin@childerhose.ca"
+caldav.auth.basic.password.command = "pass show apple"
+
+calendar.default = "home"

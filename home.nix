@@ -1,4 +1,4 @@
-{ pkgs, minicfg, cardamum, ... }:
+{ pkgs, minicfg, cardamum, calendula, ... }:
 
 {
   programs = {
@@ -30,6 +30,7 @@
   xdg.configFile."nvim".source = minicfg;
   xdg.configFile."awesome/rc.lua".source = ./rc/rc.lua;
   xdg.configFile."himalaya/config.toml".source = ./rc/himalaya.toml;
+  xdg.configFile."calendula/config.toml".source = ./rc/calendula.toml;
   xdg.configFile."cardamum/config.toml".source = ./rc/cardamum.toml;
   xdg.configFile."libinput-gestures.conf".text = ''
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
@@ -67,6 +68,7 @@
       acpi
       brave
       b4
+      calendula.packages.${pkgs.system}.default
       cardamum.packages.${pkgs.system}.default
       cloc
       feh

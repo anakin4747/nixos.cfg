@@ -14,9 +14,13 @@
       url = "github:pimalaya/cardamum";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    calendula = {
+      url = "github:pimalaya/calendula";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, minicfg, cardamum, ... }:
+  outputs = { nixpkgs, home-manager, minicfg, cardamum, calendula, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -29,7 +33,7 @@
 
       homeConfigurations."kin" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit minicfg cardamum; };
+        extraSpecialArgs = { inherit minicfg cardamum calendula; };
         modules = [ ./home.nix ];
       };
     };
