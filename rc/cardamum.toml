@@ -1,0 +1,13 @@
+[accounts.apple]
+
+default = true
+
+carddav.discover = "icloud.com"
+carddav.server = "https://contacts.icloud.com/"
+# The home URL is usually of this shape:
+#carddav.home = "https://contacts.icloud.com/<id>/principal/"
+
+carddav.auth.basic.username = "anakin@childerhose.ca"
+carddav.auth.basic.password.command = "pass show apple"
+
+addressbook.default = "card"

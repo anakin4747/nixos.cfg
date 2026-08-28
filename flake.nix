@@ -10,9 +10,13 @@
       url = "path:./minicfg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    cardamum = {
+      url = "github:pimalaya/cardamum";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, minicfg, ... }:
+  outputs = { nixpkgs, home-manager, minicfg, cardamum, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -25,7 +29,7 @@
 
       homeConfigurations."kin" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit minicfg; };
+        extraSpecialArgs = { inherit minicfg cardamum; };
         modules = [ ./home.nix ];
       };
     };

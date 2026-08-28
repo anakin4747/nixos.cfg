@@ -1,4 +1,4 @@
-{ pkgs, minicfg, ... }:
+{ pkgs, minicfg, cardamum, ... }:
 
 {
   programs = {
@@ -30,6 +30,7 @@
   xdg.configFile."nvim".source = minicfg;
   xdg.configFile."awesome/rc.lua".source = ./rc/rc.lua;
   xdg.configFile."himalaya/config.toml".source = ./rc/himalaya.toml;
+  xdg.configFile."cardamum/config.toml".source = ./rc/cardamum.toml;
   xdg.configFile."libinput-gestures.conf".text = ''
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
@@ -66,6 +67,7 @@
       acpi
       brave
       b4
+      cardamum.packages.${pkgs.system}.default
       cloc
       feh
       gh
