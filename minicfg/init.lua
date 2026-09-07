@@ -1,6 +1,7 @@
 
 vim.g.mapleader = ' '
 vim.g.loaded_netrwPlugin = 1
+vim.g.editorconfig = false
 
 -- options {{{
 local options = {
