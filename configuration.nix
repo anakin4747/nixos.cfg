@@ -30,7 +30,7 @@
 
   users.users.kin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "input" "video" ];
+    extraGroups = [ "wheel" "docker" "input" "video" "dialout" ];
   };
 
   time.timeZone = "America/Toronto";
