@@ -131,6 +131,11 @@
       touchpad.disableWhileTyping = true;
       touchpad.accelProfile = "adaptive";
     };
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+      extraUpFlags = [ "--accept-routes" ];
+    };
     unclutter.enable = true;
     usbmuxd.enable = true; # apple mobile device support
 
