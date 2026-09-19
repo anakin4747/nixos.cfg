@@ -43,6 +43,11 @@
     slock.enable = true;
   };
 
+  security.pam.services = {
+    ly.gnupg.enable = true;
+    login.gnupg.enable = true;
+  };
+
   virtualisation.docker = {
     enable = true;
   };

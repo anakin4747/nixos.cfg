@@ -44,13 +44,22 @@
 
   services.gpg-agent = {
     enable = true;
-    pinentry.package = pkgs.pinentry-tty;
+    pinentry.package = pkgs.pinentry-qt;
+    defaultCacheTtl = 86400;
+    maxCacheTtl = 86400;
     extraConfig = ''
       allow-loopback-pinentry
+      allow-preset-passphrase
     '';
   };
 
   home.file.".bg/frank.jpg".source = ./frank.jpg;
+
+  home.file.".pam-gnupg".text = ''
+    2BAC92A3B1FE2243835BBC44C2CCF87D7514995B
+    FCA6B10CFAB76924E7CD9CEB704652BC0F330B46
+  '';
+
   home = {
     stateVersion = "25.11";
 
