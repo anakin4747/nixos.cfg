@@ -66,6 +66,7 @@ vim.pack.add({
     'https://github.com/anakin4747/resize.vim.git',
     'https://github.com/anakin4747/vimalaya',
     'https://github.com/anakin4747/ZZ.term.vim.git',
+    'https://github.com/anakin4747/quickdiagnostics',
 })
 -- }}}
 
