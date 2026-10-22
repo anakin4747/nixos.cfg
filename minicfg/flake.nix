@@ -46,6 +46,7 @@
             patches = (old.patches or []) ++ [
               ../patches/0001-hardcode-vim.pack-lockfile.patch
               ../patches/0001-jump-on-one-item-for-references-and-implementation.patch
+              ../patches/0001-runtime-compiler-No-compiler-plugin-for-oelint-adv.patch
             ];
           }))
           autotools-language-server
