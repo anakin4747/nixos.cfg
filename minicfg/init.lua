@@ -56,8 +56,6 @@ vim.pack.add({
     'https://github.com/nvim-treesitter/nvim-treesitter.git',
     'https://github.com/tpope/vim-fugitive.git',
 
-    'https://github.com/anakin4747/himalaya-vim',
-
     'https://github.com/anakin4747/ai.nvim.git',
     'https://github.com/anakin4747/anakins-cscope.nvim.git',
     'https://github.com/anakin4747/frenchcards.nvim.git',
