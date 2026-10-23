@@ -87,6 +87,7 @@
           wl-clipboard
           xdg-utils
           yaml-language-server
+          zuban
         ];
       };
     };
