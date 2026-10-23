@@ -1,0 +1,5 @@
+Diagnostics:
+  ClangTidy:
+    Add: ["*"]
+  UnusedIncludes: Strict
+  MissingIncludes: Strict

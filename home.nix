@@ -32,6 +32,7 @@
   xdg.configFile."himalaya/config.toml".source = ./rc/himalaya.toml;
   xdg.configFile."calendula/config.toml".source = ./rc/calendula.toml;
   xdg.configFile."cardamum/config.toml".source = ./rc/cardamum.toml;
+  xdg.configFile."clangd/config.yaml".source = ./rc/clangd.yaml;
   xdg.configFile."libinput-gestures.conf".text = ''
     gesture swipe right 3 awesome-client "require('awful').tag.viewprev()"
     gesture swipe left  3 awesome-client "require('awful').tag.viewnext()"
