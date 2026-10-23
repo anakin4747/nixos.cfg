@@ -12,6 +12,9 @@ PROMPT_COMMAND=__prompt_command
 __prompt_command() {
     local exit="$?"
 
+    # :help terminal-osc133
+    printf "\033]133;A\007"
+
     PS1=""
 
     local red="\e[01;31m"
@@ -35,6 +38,13 @@ __prompt_command() {
     fi
 
     PS1+="\A ${green}\W ${blue}\$${rst} "
+}
+
+cd() {
+    builtin cd "$@" || return
+    [[ -S "$NVIM" ]] || return
+    # nohup is used to avoid the job number being displayed from the &
+    nohup nvim --server "$NVIM" --remote-expr "chdir('$PWD')" > /dev/null 2>&1
 }
 
 export GPG_TTY=$(tty)

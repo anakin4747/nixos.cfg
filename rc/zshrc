@@ -8,6 +8,12 @@ precmd() {
 }
 zstyle ':vcs_info:git:*' formats '%b '
 
+chpwd() {
+    [[ -S "$NVIM" ]] || return
+    # nohup is used to avoid the job number being displayed from the &
+    nohup nvim --server "$NVIM" --remote-expr "chdir('$PWD')" > /dev/null 2>&1
+}
+
 zstyle ':completion:*' file-sort modification
 
 setopt PROMPT_SUBST
