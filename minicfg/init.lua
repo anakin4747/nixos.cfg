@@ -60,11 +60,11 @@ vim.pack.add({
     'https://github.com/anakin4747/anakins-cscope.nvim.git',
     'https://github.com/anakin4747/frenchcards.nvim.git',
     'https://github.com/anakin4747/next_bufs.vim.git',
-    'https://github.com/anakin4747/oelint-adv.nvim.git',
     'https://github.com/anakin4747/resize.vim.git',
     'https://github.com/anakin4747/vimalaya',
     'https://github.com/anakin4747/ZZ.term.vim.git',
     'https://github.com/anakin4747/quickdiagnostics',
+    'https://github.com/anakin4747/yocto.nvim',
 })
 -- }}}
 
