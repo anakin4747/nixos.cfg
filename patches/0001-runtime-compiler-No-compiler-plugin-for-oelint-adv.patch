@@ -7,8 +7,7 @@ Assisted-by: Claude Opus 5.5
 Signed-off-by: Anakin Childerhose <anakin@childerhose.ca>
 ---
  runtime/compiler/oelint-adv.vim | 27 +++++++++++++++++++++++++++
- src/testdir/test_compiler.vim   | 33 +++++++++++++++++++++++++++++++++
- 2 files changed, 60 insertions(+)
+ 1 file changed, 27 insertions(+)
  create mode 100644 runtime/compiler/oelint-adv.vim
 
 diff --git a/runtime/compiler/oelint-adv.vim b/runtime/compiler/oelint-adv.vim
@@ -32,7 +31,7 @@ index 000000000..48e76ca24
 +let s:cpo_save = &cpo
 +set cpo&vim
 +
-+CompilerSet makeprg=oelint
++CompilerSet makeprg=oelint-adv\ --cached
 +CompilerSet errorformat=
 +            \%f:%l:%tnfo:%*[^:]:%m\ [branch:%.%#],
 +            \%f:%l:%tnfo:%*[^:]:%m,
@@ -44,48 +43,6 @@ index 000000000..48e76ca24
 +
 +let &cpo = s:cpo_save
 +unlet s:cpo_save
-diff --git a/src/testdir/test_compiler.vim b/src/testdir/test_compiler.vim
-index 50264c351..a9368ef53 100644
---- a/src/testdir/test_compiler.vim
-+++ b/src/testdir/test_compiler.vim
-@@ -787,4 +787,37 @@ func Test_compiler_cppcheck_project_path()
-   endtry
- endfunc
- 
-+func Test_compiler_oelint_adv()
-+  CheckFeature quickfix
-+
-+  compiler oelint-adv
-+  call assert_equal('oelint-adv', b:current_compiler)
-+  call assert_equal('oelint', &makeprg)
-+  let verbose_efm = execute('verbose set efm')
-+  call assert_match('Last set from .*[/\\]compiler[/\\]oelint-adv.vim ', verbose_efm)
-+
-+  let lines =<< trim END
-+    Xfoo.bbclass:59:warning:oelint.tabs.notabs:Don't use tabs use spaces [branch:true]
-+    Xfoo.bbclass:60:info:oelint.vars.multilineident:On a multiline assignment, line indent is desirable. 4 set, 17 desirable [branch:true]
-+    Xfoo.bb:1:error:oelint.var.mandatoryvar.SRC_URI:Variable 'SRC_URI' should be set [branch:true]
-+    Xfoo.bb:2:warning:oelint.some.rule:No branch suffix here
-+    Traceback (most recent call last):
-+  END
-+  call writefile(lines, 'Xoelint.txt', 'D')
-+  cgetfile Xoelint.txt
-+  let l = getqflist()
-+  call assert_equal(4, len(l))
-+  call assert_equal(['w', 59, "Don't use tabs use spaces"],
-+        \ [l[0].type, l[0].lnum, l[0].text])
-+  call assert_equal(['i', 60], [l[1].type, l[1].lnum])
-+  call assert_equal('On a multiline assignment, line indent is desirable. 4 set, 17 desirable', l[1].text)
-+  call assert_equal(['e', 1], [l[2].type, l[2].lnum])
-+  call assert_equal("Variable 'SRC_URI' should be set", l[2].text)
-+  call assert_equal(['w', 2], [l[3].type, l[3].lnum])
-+  call assert_equal('No branch suffix here', l[3].text)
-+
-+  call setqflist([])
-+  compiler make
-+endfunc
-+
- " vim: shiftwidth=2 sts=2 expandtab
--- 
+--
 2.55.0
 
