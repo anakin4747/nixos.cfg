@@ -11,7 +11,6 @@ local options = {
     dictionary = '/usr/share/dict/american-english,/usr/share/dict/french',
     expandtab = true,
     foldmethod = 'indent',
-    foldopen = 'all',
     hlsearch = false,
     incsearch = true,
     laststatus = 0,
