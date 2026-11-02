@@ -60,3 +60,20 @@ anakins-agents the top level agent has no tools only can call subagents that
 have the tools so that the top level agent is not blocked
 
 
+---
+
+Make a template cli tool that is essentially your kconfig resume builder but
+with technologies that can be used to create projects from configurable
+templates.
+
+skills
+test frameworks
+Makefiles
+cqfd vs nix
+cocogitto
+
+---
+
+come up with a system to automate maintaining all the projects you want to show
+off on your github. obviously automated with dependabot and AI agents to bump
+versions and typical maintenance like that
