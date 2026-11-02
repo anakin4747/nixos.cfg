@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "bpfls": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793578850,
+        "narHash": "sha256-YxKCzAzy+LQKj54tdoa8Yjjl/FIsXLzyvYha4fyy1wg=",
+        "ref": "refs/heads/main",
+        "rev": "4b841ef9e43274469fcbfaddb65ad192e6cc97d5",
+        "revCount": 69,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/anakin4747/bpfls"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/anakin4747/bpfls"
+      }
+    },
     "dtls": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -167,6 +189,7 @@
     },
     "root": {
       "inputs": {
+        "bpfls": "bpfls",
         "dtls": "dtls",
         "kconfig-language-server": "kconfig-language-server",
         "neovim-nightly-overlay": "neovim-nightly-overlay",

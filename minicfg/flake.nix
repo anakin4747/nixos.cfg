@@ -16,11 +16,15 @@
       url = "github:anakin4747/anakins-dtls";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    bpfls = {
+      url = "git+https://github.com/anakin4747/bpfls?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, neovim-nightly-overlay, ... }:
     let
-      inherit (inputs) kconfig-language-server wksls dtls;
+      inherit (inputs) kconfig-language-server wksls dtls bpfls;
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -64,6 +68,7 @@
           wksls.packages.${system}.default
           language-server-bitbake
           dtls.packages.${system}.default
+          bpfls.packages.${system}.default
           lazygit
           lsof
           lua-language-server

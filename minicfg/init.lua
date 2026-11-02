@@ -231,6 +231,7 @@ local server_commands = {
     awk = { 'awk-language-server' },
     sh = { 'bash-language-server', 'start' },
     bitbake = { 'language-server-bitbake', '--stdio' },
+    bpftrace = { 'bpfls' },
     c = { 'clangd' },
     cmake = { 'cmake-language-server' },
     cpp = { 'clangd' },
