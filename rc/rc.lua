@@ -252,6 +252,20 @@ awful.rules.rules = {
     },
 }
 
+-- Rules only apply at manage time; Brave re-requests maximize afterwards
+-- (restored from its saved window_placement), so undo it whenever it's set.
+local function unmaximize_brave(c)
+    if c.class ~= "Brave-browser" then return end
+    if c.maximized or c.maximized_horizontal or c.maximized_vertical then
+        c.maximized = false
+        c.maximized_horizontal = false
+        c.maximized_vertical = false
+    end
+end
+client.connect_signal("property::maximized", unmaximize_brave)
+client.connect_signal("property::maximized_horizontal", unmaximize_brave)
+client.connect_signal("property::maximized_vertical", unmaximize_brave)
+
 -- Init tags
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
