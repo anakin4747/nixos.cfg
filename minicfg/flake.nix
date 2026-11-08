@@ -57,7 +57,7 @@
           awk-language-server
           bash-language-server
           clang-tools
-          cmake-language-server
+          neocmakelsp
           cscope
           docker-language-server
           dot-language-server
